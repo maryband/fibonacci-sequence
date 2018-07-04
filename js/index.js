@@ -1,6 +1,6 @@
 let number = parseFloat(prompt('Enter number of sequence'));
 const result = fibonacci(number);
-document.write('The element with position ' + number + ' in the Fibonacci sequence is ' + result);
+alert('The element with position ' + number + ' in the Fibonacci sequence is ' + result);
 
 function fibonacci(number) {
 
@@ -17,4 +17,19 @@ function fibonacci(number) {
     
     return fibNext;
 } 
+
+let num = parseFloat(prompt('Enter number of sequence'));
+const solution = fibonacciArr(num);
+alert('The element with position ' + num + ' in the Fibonacci sequence is ' + solution);
+
+function fibonacciArr(num) {
+
+    let fibArr = [1, 1];
+
+    for (let i = 2; i <= num; i++) {
+        fibArr.push(fibArr[fibArr.length - 1] + fibArr[fibArr.length - 2]);
+    }
+
+    return fibArr[num - 1];
+}
 
