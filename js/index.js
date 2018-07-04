@@ -6,7 +6,11 @@ function fibonacci(number) {
 
     let fibPrev = 1;
     let fibPrePrev = 1;
-    let fibNext = 2;
+    let fibNext;
+    
+    if(number === 1 || number === 2){
+        return fibPrev;
+    } else {
 
     for(let i = 3; i <= number; i++) {
         
@@ -16,6 +20,7 @@ function fibonacci(number) {
     }
     
     return fibNext;
+   }
 } 
 
 let num = parseFloat(prompt('Enter number of sequence'));
